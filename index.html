@@ -2,10 +2,122 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>私のホームページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succob - Official Website</title>
+    <!-- Google Fonts: 必要に応じてフォントを統一 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #000; /* Wixサイトの基調色に合わせ黒 */
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        nav a { color: #fff; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #ff0044; }
+
+        main { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+
+        .hero { text-align: center; margin-bottom: 4rem; }
+        .hero h1 { font-size: 3rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+
+        section { margin-bottom: 5rem; }
+        h2 { border-left: 4px solid #ff0044; padding-left: 1rem; margin-bottom: 2rem; }
+
+        /* Grid for Content */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #222;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: #ff0044; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>ハロー、ワールド！</h1>
-    <p>GitHub Pagesでサイトを開設しました。</p>
+
+    <header>
+        <div class="logo">Succob</div>
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Succob</h1>
+            <p>Creative Circle & Web Identity</p>
+        </div>
+
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p>こちらにサークルの概要や活動内容を記述します。Wixでの冗長なコードを省き、テキスト主体で構成することでSEOや表示速度が向上します。</p>
+        </section>
+
+        <section id="works">
+            <h2>WORKS</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Project 01</h3>
+                    <p>作品や活動の具体的な内容を記載。</p>
+                </div>
+                <div class="card">
+                    <h3>Project 02</h3>
+                    <p>同人誌、イラスト、Web制作など。</p>
+                </div>
+                <div class="card">
+                    <h3>Project 03</h3>
+                    <p>実績紹介のブロックです。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Succob. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
